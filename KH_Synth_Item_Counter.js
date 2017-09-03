@@ -35,12 +35,12 @@ function changeBGImage(boss) {
   switch (boss) {
     case "KHI":
       document.body.style.backgroundColor = "#f3f3f3";
-      document.body.style.backgroundImage = "url('file:///C:/Users/Amelia/Documents/Websites/KH_Synth_Item_Counter/KHI.jpg')";
+      document.body.style.backgroundImage = "url('./KHI.jpg')";
       document.body.style.background;
       break;
     case "KHII":
       document.body.style.backgroundColor = "#f3f3f3";
-      document.body.style.backgroundImage = "url('file:///C:/Users/Amelia/Documents/Websites/KH_Synth_Item_Counter/KHII.jpg')";
+      document.body.style.backgroundImage = "url('./KHII.jpg')";
       document.body.style.background;
       break;
     default:
