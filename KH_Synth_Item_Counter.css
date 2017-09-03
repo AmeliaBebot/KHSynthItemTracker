@@ -1,0 +1,152 @@
+html {
+}
+
+body {
+  background: #000000;
+  background-image: url("file:///C:/Users/Amelia/Documents/Websites/KH_Synth_Item_Counter/KH.jpg");
+  font-family: helvetica, arial, verdana, sans-serif;
+  margin: 0;
+}
+
+h1 {
+  text-align: center;
+  color: #fff;
+  text-shadow: 2px 2px #2F4F4F;
+  margin: 0;
+  font-weight: 300;
+}
+
+h3 {
+  text-align: center;
+  color: #ffffff;
+  text-shadow: 2px 2px #2F4F4F;
+  font-weight: 100;
+}
+
+input {
+	font-size: 2.4em;
+	background-color: transparent;
+	text-align: center;
+	border-width: 0;
+	width: 100%;
+	margin: 0 0 .1em 0;
+	color: #fff;
+}
+
+label {
+	display: block;
+	font-size: .7em;
+}
+
+button {
+	/* basics */
+	color: #444;
+	background-color: #B5B198;
+	/* rounded corners */
+    -webkit-border-radius: 6px;
+          border-radius: 6px;
+    -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
+	font-weight: bold;
+
+}
+
+button:hover, button:active, button:focus {
+	background-color: #CBC7AE;
+}
+
+.box {
+	/* basics */
+	background-color: #444;
+	color: #C4BE92;
+    text-align: center;
+
+	/* rounded corners */
+    -webkit-border-radius: 12px;
+    border-radius: 12px;
+    -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
+    padding: .8em .8em 1em;
+    height: 7em;
+    width: 20em;
+	margin: 0 10px auto;
+  	-webkit-box-shadow: 0px 0px 12px 0px #000;
+    box-shadow: 0px 0px 12px 0px #000;
+
+}
+div.tab {
+  overflow: hidden;
+  background-color: #000000;
+}
+
+div.tab button {
+  background-color: inherit;
+  float: center;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+  color: #ffffff;
+}
+
+div.tab button:hover {
+  border: 1px solid #ffffff;
+}
+
+div.tab button.active {
+  border: 1px solid #ffffff;
+  background: #ffffff;
+  color: #000000;
+}
+
+.tabcontent, .nestedTab {
+  display: none;
+  padding: 6px 12px;
+  border-top: none;
+}
+
+.div-with-bg
+{
+    background-color: #000000;
+}
+button.accordion {
+    margin:auto;
+    display:block;
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 75%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+button.accordion.active, button.accordion:hover {
+    background-color: #ddd;
+}
+
+button.accordion:after {
+    content: '\002B';
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+button.accordion.active:after {
+    content: "\2212";
+}
+
+div.panel {
+    padding: 0 18px;
+    width: 73%;
+    margin:auto;
+    display:block;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}

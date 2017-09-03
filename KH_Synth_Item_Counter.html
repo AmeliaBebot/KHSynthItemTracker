@@ -1,0 +1,1965 @@
+<html>
+<head>
+  <meta charset = "UTF-8">
+  <title>KH Synth Item Tracker</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="file:///C:/Users/Amelia/Documents/Websites/KH_Synth_Item_Counter/KH_Synth_Item_Counter.css">
+  <script src="file:///C:/Users/Amelia/Documents/Websites/KH_Synth_Item_Counter/KH_Synth_Item_Counter.js"></script>
+</head>
+<body>
+
+  <div class="div-with-bg">
+    <h1>Kingdom Hearts I and II Synthesis Item Tracker</h1>
+    <div class = "tab" align="center">
+      <button class="tablinks" onclick="changeBGImage('KHI'), openContent (event, 'KHI')">Kingdom Hearts I</button>
+      <button class="tablinks" onclick="changeBGImage('KHII'), openContent (event, 'KHII')">Kingdom Hearts II</button>
+    </div>
+
+    <div id= "KHI" class ="nestedTab">
+      <div class = "tab" align="center">
+        <button class="tablinks" onclick="openContent (event, 'BlazeI', 'nested')">Blaze/Blazing</button>
+        <button class="tablinks" onclick="openContent (event, 'FrostI', 'nested')">Frost</button>
+        <button class="tablinks" onclick="openContent (event, 'ThunderI', 'nested')">Thunder</button>
+        <button class="tablinks" onclick="openContent (event, 'LucidI', 'nested')">Lucid</button>
+        <button class="tablinks" onclick="openContent (event, 'PowerI', 'nested')">Power</button>
+        <button class="tablinks" onclick="openContent (event, 'SpiritI', 'nested')">Spirit</button>
+        <button class="tablinks" onclick="openContent (event, 'BrightI', 'nested')">Bright</button>
+        <button class="tablinks" onclick="openContent (event, 'MythrilI', 'nested')">Mythril</button>
+        <button class="tablinks" onclick="openContent (event, 'FM', 'nested')">Final Mix Exclusives</button>
+        <button class="tablinks" onclick="openContent (event, 'OtherI', 'nested')">Other</button>
+      </div>
+    </div>
+
+    <div id= "KHII" class ="nestedTab">
+      <div class = "tab" align="center">
+        <button class="tablinks" onclick="openContent (event, 'BlazeII', 'nested')">Blazing</button>
+        <button class="tablinks" onclick="openContent (event, 'FrostII', 'nested')">Frost</button>
+        <button class="tablinks" onclick="openContent (event, 'Lightning', 'nested')">Lightning</button>
+        <button class="tablinks" onclick="openContent (event, 'LucidII', 'nested')">Lucid</button>
+        <button class="tablinks" onclick="openContent (event, 'PowerII', 'nested')">Power</button>
+        <button class="tablinks" onclick="openContent (event, 'Dark', 'nested')">Dark</button>
+        <button class="tablinks" onclick="openContent (event, 'Dense', 'nested')">Dense</button>
+        <button class="tablinks" onclick="openContent (event, 'Twilight', 'nested')">Twilight</button>
+        <button class="tablinks" onclick="openContent (event, 'MythrilII', 'nested')">Mythril</button>
+        <button class="tablinks" onclick="openContent (event, 'Remembrance', 'nested')">Remembrance (FM Only)</button>
+        <button class="tablinks" onclick="openContent (event, 'Tranquil', 'nested')">Tranquil (FM Only)</button>
+        <button class="tablinks" onclick="openContent (event, 'BrightII', 'nested')">Bright</button>
+        <button class="tablinks" onclick="openContent (event, 'Energy', 'nested')">Energy</button>
+        <button class="tablinks" onclick="openContent (event, 'Serenity', 'nested')">Serenity</button>
+        <button class="tablinks" onclick="openContent (event, 'OtherII', 'nested')">Other</button>
+      </div>
+    </div>
+
+  </div>
+  <div id = "BlazeI" class = "tabcontent">
+    <table width = "500" border="0" cellspacing = "0" cellpadding = "5" align = "center">
+      <tr>
+        <td>
+          <div class="box">
+            <label for="BlazeI1"><abbr title="燃え上がるかけら">Blaze Shard</abbr></label>
+            <input id="BlazeI1" value="0" />
+            <button id="down" onclick="modify_qty(-1, 'BlazeI1')">-1</button>
+            <button id="up" onclick="modify_qty(1, 'BlazeI1')">+1</button>
+          </div>
+        </td>
+        <td>
+          <div class="box">
+            <label for="BlazeI2"><abbr title="燃え上がる魔石">Blaze/Blazing Gem</abbr></label>
+            <input id="BlazeI2" value="0" />
+            <button id="down" onclick="modify_qty(-1, 'BlazeI2')">-1</button>
+            <button id="up" onclick="modify_qty(1, 'BlazeI2')">+1</button>
+          </div>
+        </td>
+      </tr>
+    </table>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <button class="accordion">Blaze Shard / 燃え上がるかけら</button>
+    <div class="panel">
+      <p>Red Nocturne (Monstro)</p>
+    </div>
+
+    <button class="accordion">Blaze/Blazing Gem / 燃え上がる魔石 </button>
+    <div class="panel">
+      <p>Bandit, Fat Bandit (Agrabah)</p>
+    </div>
+
+    <script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].onclick = function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight){
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+      }
+    }
+    </script>
+  </div>
+
+  <div id = "FrostI" class = "tabcontent">
+    <table width = "500" border="0" cellspacing = "0" cellpadding = "5" align = "center">
+      <tr>
+        <td>
+          <div class="box">
+            <label for="FrostI1"><abbr title="">Frost Shard</abbr></label>
+            <input id="FrostI1" value="0" />
+            <button id="down" onclick="modify_qty(-1, 'FrostI1')">-1</button>
+            <button id="up" onclick="modify_qty(1, 'FrostI1')">+1</button>
+          </div>
+        </td>
+        <td>
+          <div class="box">
+            <label for="FrostI2"><abbr title="">Frost Gem</abbr></label>
+            <input id="FrostI2" value="0" />
+            <button id="down" onclick="modify_qty(-1, 'FrostI2')">-1</button>
+            <button id="up" onclick="modify_qty(1, 'FrostI2')">+1</button>
+          </div>
+        </td>
+      </tr>
+    </table>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <button class="accordion">Frost Shard / 凍てつくかけら</button>
+    <div class="panel">
+      <p>Blue Rhapsody (Wonderland / Monstro / Hollow Bastion)</p>
+    </div>
+
+    <button class="accordion">Frost Gem / 凍てつく魔石 </button>
+    <div class="panel">
+      <p>Sea Neon / Sheltering Zone (Atlantica)</p>
+    </div>
+
+    <script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].onclick = function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight){
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+      }
+    }
+    </script>
+  </div>
+  <div id = "ThunderI" class = "tabcontent">
+    <table width = "500" border="0" cellspacing = "0" cellpadding = "5" align = "center">
+      <tr>
+        <td>
+          <div class="box">
+            <label for="ThunderI1"><abbr title="">Thunder Shard</abbr></label>
+            <input id="ThunderI1" value="0" />
+            <button id="down" onclick="modify_qty(-1, 'ThunderI1')">-1</button>
+            <button id="up" onclick="modify_qty(1, 'ThunderI1')">+1</button>
+          </div>
+        </td>
+        <td>
+          <div class="box">
+            <label for="ThunderI2"><abbr title="">Thunder Gem</abbr></label>
+            <input id="ThunderI2" value="0" />
+            <button id="down" onclick="modify_qty(-1, 'ThunderI2')">-1</button>
+            <button id="up" onclick="modify_qty(1, 'ThunderI2')">+1</button>
+          </div>
+        </td>
+      </tr>
+    </table>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <button class="accordion">Thunder Shard / とどろくかけら</button>
+    <div class="panel">
+      <p>Yellow Opera (Wonderland / Neverland)</p>
+    </div>
+
+    <button class="accordion">Thunder Gem / とどろく魔石 </button>
+    <div class="panel">
+      <p>Aquatank / Screwdiver (Atlantica)</p>
+    </div>
+
+    <script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].onclick = function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight){
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+      }
+    }
+    </script>
+  </div>
+  <div id = "LucidI" class = "tabcontent">
+    <table width = "500" border="0" cellspacing = "0" cellpadding = "5" align = "center">
+      <tr>
+        <td>
+          <div class="box">
+            <label for="LucidI1"><abbr title="">Lucid Shard</abbr></label>
+            <input id="LucidI1" value="0" />
+            <button id="down" onclick="modify_qty(-1, 'LucidI1')">-1</button>
+            <button id="up" onclick="modify_qty(1, 'LucidI1')">+1</button>
+          </div>
+        </td>
+        <td>
+          <div class="box">
+            <label for="LucidI2"><abbr title="">Lucid Gem</abbr></label>
+            <input id="LucidI2" value="0" />
+            <button id="down" onclick="modify_qty(-1, 'LucidI2')">-1</button>
+            <button id="up" onclick="modify_qty(1, 'LucidI2')">+1</button>
+          </div>
+        </td>
+        <td>
+          <div class="box">
+            <label for="LucidI3"><abbr title="">Lucid Crystal</abbr></label>
+            <input id="LucidI3" value="0" />
+            <button id="down" onclick="modify_qty(-1, 'LucidI3')">-1</button>
+            <button id="up" onclick="modify_qty(1, 'LucidI3')">+1</button>
+          </div>
+        </td>
+      </tr>
+    </table>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <button class="accordion">Lucid Shard / 透きとおるかけら</button>
+    <div class="panel">
+      <p>Shadow (Wonderland)</p>
+    </div>
+
+    <button class="accordion">Lucid Gem / 透きとおる魔石 </button>
+    <div class="panel">
+      <p>Gargoyle / Wight Knight (Halloween Town)</p>
+    </div>
+
+    <button class="accordion">Lucid Crystal / 透きとおる結晶 </button>
+    <div class="panel">
+      <p>Darkball (almost every world)</p>
+    </div>
+    <script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].onclick = function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight){
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+      }
+    }
+    </script>
+  </div>
+  <div id = "PowerI" class = "tabcontent">
+    <table width = "500" border="0" cellspacing = "0" cellpadding = "5" align = "center">
+      <tr>
+        <td>
+          <div class="box">
+            <label for="PowerI1"><abbr title="">Power Shard</abbr></label>
+            <input id="PowerI1" value="0" />
+            <button id="down" onclick="modify_qty(-1, 'PowerI1')">-1</button>
+            <button id="up" onclick="modify_qty(1, 'PowerI1')">+1</button>
+          </div>
+        </td>
+        <td>
+          <div class="box">
+            <label for="PowerI2"><abbr title="">Power Gem</abbr></label>
+            <input id="PowerI2" value="0" />
+            <button id="down" onclick="modify_qty(-1, 'PowerI2')">-1</button>
+            <button id="up" onclick="modify_qty(1, 'PowerI2')">+1</button>
+          </div>
+        </td>
+        <td>
+          <div class="box">
+            <label for="PowerI3"><abbr title="">Power Crystal</abbr></label>
+            <input id="PowerI3" value="0" />
+            <button id="down" onclick="modify_qty(-1, 'PowerI3')">-1</button>
+            <button id="up" onclick="modify_qty(1, 'PowerI3')">+1</button>
+          </div>
+        </td>
+      </tr>
+    </table>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <button class="accordion">Power Shard / 力のかけら</button>
+    <div class="panel">
+      <p>Bouncywild / Powerwild (Deep Jungle)</p>
+    </div>
+
+    <button class="accordion">Power Gem / 力の魔石 </button>
+    <div class="panel">
+      <p>Pirate / Air Pirate / Battleship (Neverland)</p>
+    </div>
+
+    <button class="accordion">Power Crystal / みなぎる結晶 </button>
+    <div class="panel">
+      <p>Wyvern (Hollow Bastion / Traverse Town)</p>
+    </div>
+
+    <script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].onclick = function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight){
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+      }
+    }
+    </script>
+  </div>
+  <div id = "SpiritI" class = "tabcontent">
+    <table width = "500" border="0" cellspacing = "0" cellpadding = "5" align = "center">
+      <tr>
+        <td>
+          <div class="box">
+            <label for="SpiritI1"><abbr title="">Spirit Shard</abbr></label>
+            <input id="SpiritI1" value="0" />
+            <button id="down" onclick="modify_qty(-1, 'SpiritI1')">-1</button>
+            <button id="up" onclick="modify_qty(1, 'SpiritI1')">+1</button>
+          </div>
+        </td>
+        <td>
+          <div class="box">
+            <label for="SpiritI2"><abbr title="">Spirit Gem</abbr></label>
+            <input id="SpiritI2" value="0" />
+            <button id="down" onclick="modify_qty(-1, 'SpiritI2')">-1</button>
+            <button id="up" onclick="modify_qty(1, 'SpiritI2')">+1</button>
+          </div>
+        </td>
+      </tr>
+    </table>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <button class="accordion">Spirit Shard / 闘気のかけら</button>
+    <div class="panel">
+      <p>Large Body / Soldier (Hollow Bastion)</p>
+    </div>
+
+    <button class="accordion">Spirit Gem / 闘気の魔石 </button>
+    <div class="panel">
+      <p>Air Soldier (Traverse Town / Hollow Bastion)</p>
+    </div>
+
+    <script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].onclick = function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight){
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+      }
+    }
+    </script>
+  </div>
+
+  <div id = "BrightI" class = "tabcontent">
+    <table width = "500" border="0" cellspacing = "0" cellpadding = "5" align = "center">
+      <tr>
+        <td>
+          <div class="box">
+            <label for="BrightI1"><abbr title="">Bright Shard</abbr></label>
+            <input id="BrightI1" value="0" />
+            <button id="down" onclick="modify_qty(-1, 'BrightI1')">-1</button>
+            <button id="up" onclick="modify_qty(1, 'BrightI1')">+1</button>
+          </div>
+        </td>
+        <td>
+          <div class="box">
+            <label for="BrightI2"><abbr title="">Bright Gem</abbr></label>
+            <input id="BrightI2" value="0" />
+            <button id="down" onclick="modify_qty(-1, 'BrightI2')">-1</button>
+            <button id="up" onclick="modify_qty(1, 'BrightI2')">+1</button>
+          </div>
+        </td>
+        <td>
+          <div class="box">
+            <label for="BrightI3"><abbr title="">Bright Crystal</abbr></label>
+            <input id="BrightI3" value="0" />
+            <button id="down" onclick="modify_qty(-1, 'BrightI3')">-1</button>
+            <button id="up" onclick="modify_qty(1, 'BrightI3')">+1</button>
+          </div>
+        </td>
+      </tr>
+    </table>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <button class="accordion">Bright Shard / うるおいのかけら</button>
+    <div class="panel">
+      <p>Green Requiem (Deep Jungle / Hollow Bastion)</p>
+    </div>
+
+    <button class="accordion">Bright Gem / うるおいの魔石く </button>
+    <div class="panel">
+      <p>Search Ghost (Traverse Town)</p>
+    </div>
+
+    <button class="accordion">Bright Crystal / うるおいの結晶 </button>
+    <div class="panel">
+      <p>Defender (Traverse Town / Hollow Bastion)</p>
+    </div>
+    <script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].onclick = function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight){
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+      }
+    }
+    </script>
+  </div>
+  <div id = "MythrilI" class = "tabcontent">
+    <table width = "500" border="0" cellspacing = "0" cellpadding = "5" align = "center">
+      <tr>
+        <td>
+          <div class="box">
+            <label for="MythrilI1"><abbr title="">Mythril Shard</abbr></label>
+            <input id="MythrilI1" value="0" />
+            <button id="down" onclick="modify_qty(-1, 'MythrilI1')">-1</button>
+            <button id="up" onclick="modify_qty(1, 'MythrilI1')">+1</button>
+          </div>
+        </td>
+        <td>
+          <div class="box">
+            <label for="MythrilI2"><abbr title="">Mythril</abbr></label>
+            <input id="MythrilI2" value="0" />
+            <button id="down" onclick="modify_qty(-1, 'MythrilI2')">-1</button>
+            <button id="up" onclick="modify_qty(1, 'MythrilI2')">+1</button>
+          </div>
+        </td>
+      </tr>
+    </table>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <button class="accordion">Mythril Shard / ミスリルのかけら</button>
+    <div class="panel">
+      <p>Barrel Spider / Pot Spider (Agrabah / Monstro)</p>
+    </div>
+
+    <button class="accordion">Mythril / ミスリル </button>
+    <div class="panel">
+      <p>Treasure chests / Synthesis</p>
+    </div>
+
+    <script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].onclick = function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight){
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+      }
+    }
+    </script>
+  </div>
+
+  <div id = "FM" class = "tabcontent">
+    <table width = "500" border="0" cellspacing = "0" cellpadding = "5" align = "center">
+      <tr>
+        <td>
+          <div class="box">
+            <label for="FM1"><abbr title="燃え上がるかけら">Blazing Stone</abbr></label>
+            <input id="FM1" value="0" />
+            <button id="down" onclick="modify_qty(-1, 'FM1')">-1</button>
+            <button id="up" onclick="modify_qty(1, 'FM1')">+1</button>
+          </div>
+        </td>
+        <td>
+          <div class="box">
+            <label for="FM2"><abbr title="燃え上がる魔石">Frost Stone</abbr></label>
+            <input id="FM2" value="0" />
+            <button id="down" onclick="modify_qty(-1, 'FM2')">-1</button>
+            <button id="up" onclick="modify_qty(1, 'FM2')">+1</button>
+          </div>
+        </td>
+        <td>
+          <div class="box">
+            <label for="FM3"><abbr title="">Lightning Stone</abbr></label>
+            <input id="FM3" value="0" />
+            <button id="down" onclick="modify_qty(-1, 'FM3')">-1</button>
+            <button id="up" onclick="modify_qty(1, 'FM3')">+1</button>
+          </div>
+        </td>
+        <td>
+          <div class="box">
+            <label for="FM4"><abbr title="燃え上がるかけら">Power Stone</abbr></label>
+            <input id="FM4" value="0" />
+            <button id="down" onclick="modify_qty(-1, 'FM4')">-1</button>
+            <button id="up" onclick="modify_qty(1, 'FM4')">+1</button>
+          </div>
+        </td>
+        <td>
+          <div class="box">
+            <label for="FM5"><abbr title="燃え上がる魔石">Fury Stone</abbr></label>
+            <input id="FM5" value="0" />
+            <button id="down" onclick="modify_qty(-1, 'FM5')">-1</button>
+            <button id="up" onclick="modify_qty(1, 'FM5')">+1</button>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="box">
+            <label for="FM6"><abbr title="">Mythril Stone</abbr></label>
+            <input id="FM6" value="0" />
+            <button id="down" onclick="modify_qty(-1, 'FM6')">-1</button>
+            <button id="up" onclick="modify_qty(1, 'FM6')">+1</button>
+          </div>
+        </td>
+        <td>
+          <div class="box">
+            <label for="FM7"><abbr title="燃え上がるかけら">Dazzling Stone</abbr></label>
+            <input id="FM7" value="0" />
+            <button id="down" onclick="modify_qty(-1, 'FM7')">-1</button>
+            <button id="up" onclick="modify_qty(1, 'FM7')">+1</button>
+          </div>
+        </td>
+        <td>
+          <div class="box">
+            <label for="FM8"><abbr title="燃え上がる魔石">Stormy Stone</abbr></label>
+            <input id="FM8" value="0" />
+            <button id="down" onclick="modify_qty(-1, 'FM8')">-1</button>
+            <button id="up" onclick="modify_qty(1, 'FM8')">+1</button>
+          </div>
+        </td>
+        <td>
+          <div class="box">
+            <label for="FM9"><abbr title="">Energy Stone</abbr></label>
+            <input id="FM9" value="0" />
+            <button id="down" onclick="modify_qty(-1, 'FM9')">-1</button>
+            <button id="up" onclick="modify_qty(1, 'FM9')">+1</button>
+          </div>
+        </td>
+        <td>
+          <div class="box">
+            <label for="FM10"><abbr title="燃え上がるかけら">Serenity Power</abbr></label>
+            <input id="FM10" value="0" />
+            <button id="down" onclick="modify_qty(-1, 'FM10')">-1</button>
+            <button id="up" onclick="modify_qty(1, 'FM10')">+1</button>
+          </div>
+        </td>
+      </tr>
+    </table>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <button class="accordion">Blazing Stone / 燃え上がるしずく</button>
+    <div class="panel">
+      <p>Chimera (Halloween Town Only)</p>
+    </div>
+
+    <button class="accordion">Frost Stone / 凍てつくしずく</button>
+    <div class="panel">
+      <p>Grand Ghost (Monstro Only)</p>
+    </div>
+
+    <button class="accordion">Lightning Stone / とどろくしずく</button>
+    <div class="panel">
+      <p>Black Ballad (Deep Jungle Only)</p>
+    </div>
+
+    <button class="accordion">Power Stone / 力のしずく </button>
+    <div class="panel">
+      <p>Sniperwild (Traverse Town Only)</p>
+    </div>
+
+    <button class="accordion">Fury Stone / 闘気のしず </button>
+    <div class="panel">
+      <p>Gigas Shadow (Wonderland Only)</p>
+    </div>
+
+    <button class="accordion">Mythril Stone / ミスリルのしずく </button>
+    <div class="panel">
+      <p>Pot Scorpion (Agrabah Only)</p>
+    </div>
+
+    <button class="accordion">Dazzling Stone / きらめくしずく </button>
+    <div class="panel">
+      <p>Jet Balloon (Neverland Only)</p>
+    </div>
+
+    <button class="accordion">Stormy Stone / 吹き荒れるしずく </button>
+    <div class="panel">
+      <p>Neo Shadow (End of the World Only)</p>
+    </div>
+
+    <button class="accordion">Energy Stone / みなぎるしずく </button>
+    <div class="panel">
+      <p>Stealth Soldier (Hollow Bastion Only)</p>
+    </div>
+
+    <button class="accordion">Serenity Power / 満たされるチカラ </button>
+    <div class="panel">
+      <p>Pink Agaricus (Deep Jungle / Atlantica Only)</p>
+    </div>
+
+    <script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].onclick = function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight){
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+      }
+    }
+    </script>
+  </div>
+
+  <div id = "OtherI" class = "tabcontent">
+    <table width = "500" border="0" cellspacing = "0" cellpadding = "5" align = "center">
+      <tr>
+        <td>
+          <div class="box">
+            <label for="OtherI1"><abbr title="">Mystery Goo</abbr></label>
+            <input id="OtherI1" value="0" />
+            <button id="down" onclick="modify_qty(-1, 'OtherI1')">-1</button>
+            <button id="up" onclick="modify_qty(1, 'OtherI1')">+1</button>
+          </div>
+        </td>
+        <td>
+          <div class="box">
+            <label for="OtherI2"><abbr title="">Gale</abbr></label>
+            <input id="OtherI2" value="0" />
+            <button id="down" onclick="modify_qty(-1, 'OtherI2')">-1</button>
+            <button id="up" onclick="modify_qty(1, 'OtherI2')">+1</button>
+          </div>
+        </td>
+        <td>
+          <div class="box">
+            <label for="OtherI3"><abbr title="">Orichalcum</abbr></label>
+            <input id="OtherI3" value="0" />
+            <button id="down" onclick="modify_qty(-1, 'OtherI3')">-1</button>
+            <button id="up" onclick="modify_qty(1, 'OtherI3')">+1</button>
+          </div>
+        </td>
+        <td>
+          <div class="box">
+            <label for="OtherI4"><abbr title="">Dark Matter</abbr></label>
+            <input id="OtherI4" value="0" />
+            <button id="down" onclick="modify_qty(-1, 'OtherI4')">-1</button>
+            <button id="up" onclick="modify_qty(1, 'OtherI4')">+1</button>
+          </div>
+        </td>
+      </tr>
+    </table>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <button class="accordion">Mystery Goo / 満たされるしずく </button>
+    <div class="panel">
+      <p>Black Fungus / Rare Truffle / White Mushrooms</p>
+    </div>
+
+    <button class="accordion">Gale / 吹き荒れるカゼ </button>
+    <div class="panel">
+      <p>Angel Star / Invisible (End of the World)</p>
+    </div>
+
+    <button class="accordion">Orichalcum / オリハルコン </button>
+    <div class="panel">
+      <p>Treasure Chests / Synthesis / Item Shop</p>
+    </div>
+
+    <button class="accordion">Dark Matter / ダークマター </button>
+    <div class="panel">
+      <p>Treasure Chests / Synthesis</p>
+    </div>
+
+    <script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].onclick = function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight){
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+      }
+    }
+    </script>
+  </div>
+
+  <div id = "BlazeII" class = "tabcontent">
+    <table width = "500" border="0" cellspacing = "0" cellpadding = "5" align = "center">
+      <tr>
+        <td>
+          <div class="box">
+            <label for="BlazeII1"><abbr title="燃え上がるかけら">Blazing Shard</abbr></label>
+            <input id="BlazeII1" value="0" />
+            <button id="down" onclick="modify_qty(-1, 'BlazeII1')">-1</button>
+            <button id="up" onclick="modify_qty(1, 'BlazeII1')">+1</button>
+          </div>
+        </td>
+        <td>
+          <div class="box">
+            <label for="BlazeII2"><abbr title="燃え上がるしずく">Blazing Stone</abbr></label>
+            <input id="BlazeII2" value="0" />
+            <button id="down" onclick="modify_qty(-1, 'BlazeII2')">-1</button>
+            <button id="up" onclick="modify_qty(1, 'BlazeII2')">+1</button>
+          </div>
+        </td>
+        <td>
+          <div class="box">
+            <label for="BlazeII3"><abbr title="燃え上がる魔石">Blazing Gem</abbr></label>
+            <input id="BlazeII3" value="0" />
+            <button id="down" onclick="modify_qty(-1, 'BlazeII3')">-1</button>
+            <button id="up" onclick="modify_qty(1, 'BlazeII3')">+1</button>
+          </div>
+        </td>
+        <td>
+          <div class="box">
+            <label for="BlazeII4"><abbr title="燃え上がる結晶">Blazing Crystal</abbr></label>
+            <input id="BlazeII4" value="0" />
+            <button id="down" onclick="modify_qty(-1, 'BlazeII4')">-1</button>
+            <button id="up" onclick="modify_qty(1, 'BlazeII4')">+1</button>
+          </div>
+        </td>
+      </tr>
+    </table>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <button class="accordion">Blazing Shard / 燃え上がるかけら </button>
+    <div class="panel">
+      <p>Hammer Frame, Minute Bomb (Beast's Castle)</p>
+    </div>
+
+    <button class="accordion">Blazing Stone / 燃え上がるしずく </button>
+    <div class="panel">
+      <p>Cannon Gun, Tornado Step (Olympus Coliseum)</p>
+    </div>
+
+    <button class="accordion">Blazing Gem / 燃え上がる魔石 </button>
+    <div class="panel">
+      <p>Fat Bandit, Fiery Globe (Agrabah)</p>
+    </div>
+
+    <button class="accordion">Blazing Crystal / 燃え上がる結晶 </button>
+    <div class="panel">
+      <p>Crescendo, Crimson Jazz (Beast's Crystal)</p>
+    </div>
+
+    <script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].onclick = function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight){
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+      }
+    }
+    </script>
+  </div>
+
+  <div id = "FrostII" class = "tabcontent">
+    <table width = "500" border="0" cellspacing = "0" cellpadding = "5" align = "center">
+      <tr>
+        <td>
+          <div class="box">
+            <label for="FrostII1"><abbr title="凍てつくかけら">Frost Shard</abbr></label>
+            <input id="FrostII1" value="0" />
+            <button id="down" onclick="modify_qty(-1, 'FrostII1')">-1</button>
+            <button id="up" onclick="modify_qty(1, 'FrostII1')">+1</button>
+          </div>
+        </td>
+        <td>
+          <div class="box">
+            <label for="FrostII2"><abbr title="凍てつくしずく">Frost Stone</abbr></label>
+            <input id="FrostII2" value="0" />
+            <button id="down" onclick="modify_qty(-1, 'FrostII2')">-1</button>
+            <button id="up" onclick="modify_qty(1, 'FrostII2')">+1</button>
+          </div>
+        </td>
+        <td>
+          <div class="box">
+            <label for="FrostII3"><abbr title="凍てつく魔石">Frost Gem</abbr></label>
+            <input id="FrostII3" value="0" />
+            <button id="down" onclick="modify_qty(-1, 'FrostII3')">-1</button>
+            <button id="up" onclick="modify_qty(1, 'FrostII3')">+1</button>
+          </div>
+        </td>
+        <td>
+          <div class="box">
+            <label for="FrostII4"><abbr title="凍てつく結晶">Frost Crystal</abbr></label>
+            <input id="FrostII4" value="0" />
+            <button id="down" onclick="modify_qty(-1, 'FrostII4')">-1</button>
+            <button id="up" onclick="modify_qty(1, 'FrostII4')">+1</button>
+          </div>
+        </td>
+      </tr>
+    </table>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <button class="accordion">Frost Shard / 凍てつくかけら </button>
+    <div class="panel">
+      <p>Hook Bat, Lance Soldier (Land of Dragons)</p>
+    </div>
+
+    <button class="accordion">Frost Stone / 凍てつくしずく </button>
+    <div class="panel">
+      <p>Aeroplane, Hot Rod (Timeless River)</p>
+    </div>
+
+    <button class="accordion">Frost Gem / 凍てつく魔石 </button>
+    <div class="panel">
+      <p>Fortune Teller, Icy Cube (Agrabah)</p>
+    </div>
+
+    <button class="accordion">Frost Crystal / 凍てつく結晶 </button>
+    <div class="panel">
+      <p>Living Bone (Pride Lands)</p>
+    </div>
+
+    <script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].onclick = function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight){
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+      }
+    }
+    </script>
+  </div>
+
+  <div id = "Lightning" class = "tabcontent">
+    <table width = "500" border="0" cellspacing = "0" cellpadding = "5" align = "center">
+      <tr>
+        <td>
+          <div class="box">
+            <label for="Lightning1"><abbr title="とどろくかけら">Lightning Shard</abbr></label>
+            <input id="Lightning1" value="0" />
+            <button id="down" onclick="modify_qty(-1, 'Lightning1')">-1</button>
+            <button id="up" onclick="modify_qty(1, 'Lightning1')">+1</button>
+          </div>
+        </td>
+        <td>
+          <div class="box">
+            <label for="Lightning2"><abbr title="とどろくしずく">Lightning Stone</abbr></label>
+            <input id="Lightning2" value="0" />
+            <button id="down" onclick="modify_qty(-1, 'Lightning2')">-1</button>
+            <button id="up" onclick="modify_qty(1, 'Lightning2')">+1</button>
+          </div>
+        </td>
+        <td>
+          <div class="box">
+            <label for="Lightning3"><abbr title="とどろく魔石">Lightning Gem</abbr></label>
+            <input id="Lightning3" value="0" />
+            <button id="down" onclick="modify_qty(-1, 'Lightning3')">-1</button>
+            <button id="up" onclick="modify_qty(1, 'Lightning3')">+1</button>
+          </div>
+        </td>
+        <td>
+          <div class="box">
+            <label for="Lightning4"><abbr title="とどろく結晶">Lightning Crystal</abbr></label>
+            <input id="Lightning4" value="0" />
+            <button id="down" onclick="modify_qty(-1, 'Lightning4')">-1</button>
+            <button id="up" onclick="modify_qty(1, 'Lightning4')">+1</button>
+          </div>
+        </td>
+      </tr>
+    </table>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <button class="accordion">Lightning Shard / とどろくかけら </button>
+    <div class="panel">
+      <p>Bolt Tower, Rapid Thruster (Land of Dragons)</p>
+    </div>
+
+    <button class="accordion">Lightning Stone / とどろくしずく </button>
+    <div class="panel">
+      <p>Driller Mole, Emerald Blues (Olympus Coliseum)</p>
+    </div>
+
+    <button class="accordion">Lightning Gem / とどろく魔石 </button>
+    <div class="panel">
+      <p>Armored Knight, Surveillance Robot (Hollow Bastion)</p>
+    </div>
+
+    <button class="accordion">Lightning Crystal / とどろく結晶 </button>
+    <div class="panel">
+      <p>Devastator, Strafer (Space Paranoids)</p>
+    </div>
+
+    <script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].onclick = function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight){
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+      }
+    }
+    </script>
+  </div>
+
+  <div id = "LucidII" class = "tabcontent">
+    <table width = "500" border="0" cellspacing = "0" cellpadding = "5" align = "center">
+      <tr>
+        <td>
+          <div class="box">
+            <label for="LucidII1"><abbr title="透きとおるかけら">Lucid Shard</abbr></label>
+            <input id="LucidII1" value="0" />
+            <button id="down" onclick="modify_qty(-1, 'LucidII1')">-1</button>
+            <button id="up" onclick="modify_qty(1, 'LucidII1')">+1</button>
+          </div>
+        </td>
+        <td>
+          <div class="box">
+            <label for="LucidII2"><abbr title="透きとおるしずく">Lucid Stone</abbr></label>
+            <input id="LucidII2" value="0" />
+            <button id="down" onclick="modify_qty(-1, 'LucidII2')">-1</button>
+            <button id="up" onclick="modify_qty(1, 'LucidII2')">+1</button>
+          </div>
+        </td>
+        <td>
+          <div class="box">
+            <label for="LucidII3"><abbr title="とどろく魔石">Lucid Gem</abbr></label>
+            <input id="LucidII3" value="0" />
+            <button id="down" onclick="modify_qty(-1, 'LucidII3')">-1</button>
+            <button id="up" onclick="modify_qty(1, 'LucidII3')">+1</button>
+          </div>
+        </td>
+        <td>
+          <div class="box">
+            <label for="LucidII4"><abbr title="とどろく結晶">Lucid Crystal</abbr></label>
+            <input id="LucidII4" value="0" />
+            <button id="down" onclick="modify_qty(-1, 'LucidII4')">-1</button>
+            <button id="up" onclick="modify_qty(1, 'LucidII4')">+1</button>
+          </div>
+        </td>
+      </tr>
+    </table>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <button class="accordion">Lucid Shard / 透きとおるかけら </button>
+    <div class="panel">
+      <p>Rabid Dog, Trick Ghost (Halloween Town)</p>
+    </div>
+
+    <button class="accordion">Lucid Stone / 透きとおるしずく </button>
+    <div class="panel">
+      <p>Graveyard, Toy Soldier, Wight Knight (Halloween Town)</p>
+    </div>
+
+    <button class="accordion">Lucid Gem / 透きとおる魔石 </button>
+    <div class="panel">
+      <p>Bookmaster, Magnum Loader (Hollow Bastion)</p>
+    </div>
+
+    <button class="accordion">Lucid Crystal / 透きとおる結晶 </button>
+    <div class="panel">
+      <p>NeoShadow (The World That Never Was)</p>
+    </div>
+
+    <script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].onclick = function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight){
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+      }
+    }
+    </script>
+  </div>
+
+  <div id = "PowerII" class = "tabcontent">
+    <table width = "500" border="0" cellspacing = "0" cellpadding = "5" align = "center">
+      <tr>
+        <td>
+          <div class="box">
+            <label for="PowerII1"><abbr title="力のかけら">Power Shard</abbr></label>
+            <input id="PowerII1" value="0" />
+            <button id="down" onclick="modify_qty(-1, 'PowerII1')">-1</button>
+            <button id="up" onclick="modify_qty(1, 'PowerII1')">+1</button>
+          </div>
+        </td>
+        <td>
+          <div class="box">
+            <label for="PowerII2"><abbr title="力のかけら">Power Stone</abbr></label>
+            <input id="PowerII2" value="0" />
+            <button id="down" onclick="modify_qty(-1, 'PowerII2')">-1</button>
+            <button id="up" onclick="modify_qty(1, 'PowerII2')">+1</button>
+          </div>
+        </td>
+        <td>
+          <div class="box">
+            <label for="PowerII3"><abbr title="力のかけら">Power Gem</abbr></label>
+            <input id="PowerII3" value="0" />
+            <button id="down" onclick="modify_qty(-1, 'PowerII3')">-1</button>
+            <button id="up" onclick="modify_qty(1, 'PowerII3')">+1</button>
+          </div>
+        </td>
+        <td>
+          <div class="box">
+            <label for="PowerII4"><abbr title="力のかけら">Power Crystal</abbr></label>
+            <input id="PowerII4" value="0" />
+            <button id="down" onclick="modify_qty(-1, 'PowerII4')">-1</button>
+            <button id="up" onclick="modify_qty(1, 'PowerII4')">+1</button>
+          </div>
+        </td>
+      </tr>
+    </table>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <button class="accordion">Power Shard / 力のかけら </button>
+    <div class="panel">
+      <p>Creeper Plant, Large Body (Halloween Town)</p>
+    </div>
+
+    <button class="accordion">Power Stone / 力のしずく </button>
+    <div class="panel">
+      <p>Luna Bandit, Silver Rock (Agrabah)</p>
+    </div>
+
+    <button class="accordion">Power Gem / 力の魔石 </button>
+    <div class="panel">
+      <p>Aerial Knocker, Shaman (Pride Lands)</p>
+    </div>
+
+    <button class="accordion">Power Crystal / 力の結晶 </button>
+    <div class="panel">
+      <p>Morning Star (Hollow Bastion)</p>
+    </div>
+
+    <script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].onclick = function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight){
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+      }
+    }
+    </script>
+  </div>
+
+  <div id = "Dark" class = "tabcontent">
+    <table width = "500" border="0" cellspacing = "0" cellpadding = "5" align = "center">
+      <tr>
+        <td>
+          <div class="box">
+            <label for="Dark1"><abbr title="うごめくかけら">Dark Shard</abbr></label>
+            <input id="Dark1" value="0" />
+            <button id="down" onclick="modify_qty(-1, 'Dark1')">-1</button>
+            <button id="up" onclick="modify_qty(1, 'Dark1')">+1</button>
+          </div>
+        </td>
+        <td>
+          <div class="box">
+            <label for="Dark2"><abbr title="うごめくしずく">Dark Stone</abbr></label>
+            <input id="Dark2" value="0" />
+            <button id="down" onclick="modify_qty(-1, 'Dark2')">-1</button>
+            <button id="up" onclick="modify_qty(1, 'Dark2')">+1</button>
+          </div>
+        </td>
+        <td>
+          <div class="box">
+            <label for="Dark3"><abbr title="うごめく魔石">Dark Gem</abbr></label>
+            <input id="Dark3" value="0" />
+            <button id="down" onclick="modify_qty(-1, 'Dark3')">-1</button>
+            <button id="up" onclick="modify_qty(1, 'Dark3')">+1</button>
+          </div>
+        </td>
+        <td>
+          <div class="box">
+            <label for="Dark4"><abbr title="うごめく結晶">Dark Crystal</abbr></label>
+            <input id="Dark4" value="0" />
+            <button id="down" onclick="modify_qty(-1, 'Dark4')">-1</button>
+            <button id="up" onclick="modify_qty(1, 'Dark4')">+1</button>
+          </div>
+        </td>
+      </tr>
+    </table>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <button class="accordion">Dark Shard / うごめくかけら </button>
+    <div class="panel">
+      <p>Shadow, Soldier (The World that Never Was)</p>
+    </div>
+
+    <button class="accordion">Dark Stone / うごめくしずく </button>
+    <div class="panel">
+      <p>Assault Rider, Nightwalker (Land of Dragons)</p>
+    </div>
+
+    <button class="accordion">Dark Gem / うごめく魔石 </button>
+    <div class="panel">
+      <p>Gargoyle Knight, Gargoyle Warrior (Beast's Castle)</p>
+    </div>
+
+    <button class="accordion">Dark Crystal / うごめく結晶 </button>
+    <div class="panel">
+      <p>Air Pirate (Land of Dragons)</p>
+    </div>
+
+    <script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].onclick = function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight){
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+      }
+    }
+    </script>
+  </div>
+
+  <div id = "Dense" class = "tabcontent">
+    <table width = "500" border="0" cellspacing = "0" cellpadding = "5" align = "center">
+      <tr>
+        <td>
+          <div class="box">
+            <label for="Dense1"><abbr title="はざまのかけら">Dense Shard</abbr></label>
+            <input id="Dense1" value="0" />
+            <button id="down" onclick="modify_qty(-1, 'Dense1')">-1</button>
+            <button id="up" onclick="modify_qty(1, 'Dense1')">+1</button>
+          </div>
+        </td>
+        <td>
+          <div class="box">
+            <label for="Dense2"><abbr title="はざまのしずく">Dense Stone</abbr></label>
+            <input id="Dense2" value="0" />
+            <button id="down" onclick="modify_qty(-1, 'Dense2')">-1</button>
+            <button id="up" onclick="modify_qty(1, 'Dense2')">+1</button>
+          </div>
+        </td>
+        <td>
+          <div class="box">
+            <label for="Dense3"><abbr title="はざまの魔石">Dense Gem</abbr></label>
+            <input id="Dense3" value="0" />
+            <button id="down" onclick="modify_qty(-1, 'Dense3')">-1</button>
+            <button id="up" onclick="modify_qty(1, 'Dense3')">+1</button>
+          </div>
+        </td>
+        <td>
+          <div class="box">
+            <label for="Dense4"><abbr title="はざまの結晶">Dense Crystal</abbr></label>
+            <input id="Dense4" value="0" />
+            <button id="down" onclick="modify_qty(-1, 'Dense4')">-1</button>
+            <button id="up" onclick="modify_qty(1, 'Dense4')">+1</button>
+          </div>
+        </td>
+      </tr>
+    </table>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <button class="accordion">Dense Shard / はざまのかけら </button>
+    <div class="panel">
+      <p>Creeper, Dragoon (The World that Never Was)</p>
+    </div>
+
+    <button class="accordion">Dense Stone / はざまのしずく </button>
+    <div class="panel">
+      <p>Sniper (The World that Never Was)</p>
+    </div>
+
+    <button class="accordion">Dense Gem / はざまの魔石 </button>
+    <div class="panel">
+      <p>Samurai (The World that Never Was)</p>
+    </div>
+
+    <button class="accordion">Dense Crystal / はざまの結晶 </button>
+    <div class="panel">
+      <p>Berserker (The World that Never Was)</p>
+    </div>
+
+    <script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].onclick = function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight){
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+      }
+    }
+    </script>
+  </div>
+
+  <div id = "Twilight" class = "tabcontent">
+    <table width = "500" border="0" cellspacing = "0" cellpadding = "5" align = "center">
+      <tr>
+        <td>
+          <div class="box">
+            <label for="Twilight1"><abbr title="たそがれのかけら">Twilight Shard</abbr></label>
+            <input id="Twilight1" value="0" />
+            <button id="down" onclick="modify_qty(-1, 'Twilight1')">-1</button>
+            <button id="up" onclick="modify_qty(1, 'Twilight1')">+1</button>
+          </div>
+        </td>
+        <td>
+          <div class="box">
+            <label for="Twilight2"><abbr title="たそがれのしずく">Twilight Stone</abbr></label>
+            <input id="Twilight2" value="0" />
+            <button id="down" onclick="modify_qty(-1, 'Twilight2')">-1</button>
+            <button id="up" onclick="modify_qty(1, 'Twilight2')">+1</button>
+          </div>
+        </td>
+        <td>
+          <div class="box">
+            <label for="Twilight3"><abbr title="たそがれの魔石">Twilight Gem</abbr></label>
+            <input id="Twilight3" value="0" />
+            <button id="down" onclick="modify_qty(-1, 'Twilight3')">-1</button>
+            <button id="up" onclick="modify_qty(1, 'Twilight3')">+1</button>
+          </div>
+        </td>
+        <td>
+          <div class="box">
+            <label for="Twilight4"><abbr title="たそがれの結晶">Twilight Crystal</abbr></label>
+            <input id="Twilight4" value="0" />
+            <button id="down" onclick="modify_qty(-1, 'Twilight4')">-1</button>
+            <button id="up" onclick="modify_qty(1, 'Twilight4')">+1</button>
+          </div>
+        </td>
+      </tr>
+    </table>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <button class="accordion">Twilight Shard / たそがれのかけら </button>
+    <div class="panel">
+      <p>Dusk, Gambler (Twilight Town)</p>
+    </div>
+
+    <button class="accordion">Twilight Stone / たそがれのしずく </button>
+    <div class="panel">
+      <p>Dancer (Twilight Town)</p>
+    </div>
+
+    <button class="accordion">Twilight Gem / たそがれの魔石 </button>
+    <div class="panel">
+      <p>Assassin (The World that Never Was)</p>
+    </div>
+
+    <button class="accordion">Twilight Crystal / たそがれの結晶 </button>
+    <div class="panel">
+      <p>Sorcerer (The World that Never Was)</p>
+    </div>
+
+    <script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].onclick = function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight){
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+      }
+    }
+    </script>
+  </div>
+
+  <div id = "MythrilII" class = "tabcontent">
+    <table width = "500" border="0" cellspacing = "0" cellpadding = "5" align = "center">
+      <tr>
+        <td>
+          <div class="box">
+            <label for="MythrilII1"><abbr title="ミスリルのかけら">Mythril Shard</abbr></label>
+            <input id="MythrilII1" value="0" />
+            <button id="down" onclick="modify_qty(-1, 'MythrilII1')">-1</button>
+            <button id="up" onclick="modify_qty(1, 'MythrilII1')">+1</button>
+          </div>
+        </td>
+        <td>
+          <div class="box">
+            <label for="MythrilII2"><abbr title="ミスリルのしずく">Mythril Stone</abbr></label>
+            <input id="MythrilII2" value="0" />
+            <button id="down" onclick="modify_qty(-1, 'MythrilII2')">-1</button>
+            <button id="up" onclick="modify_qty(1, 'MythrilII2')">+1</button>
+          </div>
+        </td>
+        <td>
+          <div class="box">
+            <label for="MythrilII3"><abbr title="ミスリルの魔石">Mythril Gem</abbr></label>
+            <input id="MythrilII3" value="0" />
+            <button id="down" onclick="modify_qty(-1, 'MythrilII3')">-1</button>
+            <button id="up" onclick="modify_qty(1, 'MythrilII3')">+1</button>
+          </div>
+        </td>
+        <td>
+          <div class="box">
+            <label for="MythrilII4"><abbr title="ミスリルの結晶">Mythril Crystal</abbr></label>
+            <input id="MythrilII4" value="0" />
+            <button id="down" onclick="modify_qty(-1, 'MythrilII4')">-1</button>
+            <button id="up" onclick="modify_qty(1, 'MythrilII4')">+1</button>
+          </div>
+        </td>
+      </tr>
+    </table>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <button class="accordion">Mythril Shard / ミスリルのかけら </button>
+    <div class="panel">
+      <p>Synthesis</p>
+    </div>
+
+    <button class="accordion">Mythril Stone / ミスリルのしずく </button>
+    <div class="panel">
+      <p>Synthesis</p>
+    </div>
+
+    <button class="accordion">Mythril Gem / ミスリルの魔石 </button>
+    <div class="panel">
+      <p>Synthesis</p>
+    </div>
+
+    <button class="accordion">Mythril Crystal / ミスリルの結晶 </button>
+    <div class="panel">
+      <p>Synthesis</p>
+    </div>
+
+    <script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].onclick = function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight){
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+      }
+    }
+    </script>
+  </div>
+
+  <div id = "Remembrance" class = "tabcontent">
+    <table width = "500" border="0" cellspacing = "0" cellpadding = "5" align = "center">
+      <tr>
+        <td>
+          <div class="box">
+            <label for="Remembrance1"><abbr title="追憶のかけら">Remembrance Shard</abbr></label>
+            <input id="Remembrance1" value="0" />
+            <button id="down" onclick="modify_qty(-1, 'Remembrance1')">-1</button>
+            <button id="up" onclick="modify_qty(1, 'Remembrance1')">+1</button>
+          </div>
+        </td>
+        <td>
+          <div class="box">
+            <label for="Remembrance2"><abbr title="追憶のしずく">Remembrance Stone</abbr></label>
+            <input id="Remembrance2" value="0" />
+            <button id="down" onclick="modify_qty(-1, 'Remembrance2')">-1</button>
+            <button id="up" onclick="modify_qty(1, 'Remembrance2')">+1</button>
+          </div>
+        </td>
+        <td>
+          <div class="box">
+            <label for="Remembrance3"><abbr title="追憶の魔石">Remembrance Gem</abbr></label>
+            <input id="Remembrance3" value="0" />
+            <button id="down" onclick="modify_qty(-1, 'Remembrance3')">-1</button>
+            <button id="up" onclick="modify_qty(1, 'Remembrance3')">+1</button>
+          </div>
+        </td>
+        <td>
+          <div class="box">
+            <label for="Remembrance4"><abbr title="追憶の結晶">Remembrance Crystal</abbr></label>
+            <input id="Remembrance4" value="0" />
+            <button id="down" onclick="modify_qty(-1, 'Remembrance4')">-1</button>
+            <button id="up" onclick="modify_qty(1, 'Remembrance4')">+1</button>
+          </div>
+        </td>
+      </tr>
+    </table>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <button class="accordion">Remembrance Shard / 追憶のかけら </button>
+    <div class="panel">
+      <p>Perplex, Iron Hammer, Silent Launcher (Cavern of Remembrance)</p>
+    </div>
+
+    <button class="accordion">Remembrance Stone / 追憶のしずく </button>
+    <div class="panel">
+      <p>Air Viking, Magic Phantom, Lance Warrior, Necromancer (Cavern of Remembrance)</p>
+    </div>
+
+    <button class="accordion">Remembrance Gem / 追憶の魔石 </button>
+    <div class="panel">
+      <p>Spring Metal, Rune Master, Mad Bumper (Cavern of Remembrance)</p>
+    </div>
+
+    <button class="accordion">Remembrance Crystal / 追憶の結晶 </button>
+    <div class="panel">
+      <p>Reckless (Cavern of Remembrance)</p>
+    </div>
+
+    <script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].onclick = function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight){
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+      }
+    }
+    </script>
+  </div>
+
+  <div id = "Tranquil" class = "tabcontent">
+    <table width = "500" border="0" cellspacing = "0" cellpadding = "5" align = "center">
+      <tr>
+        <td>
+          <div class="box">
+            <label for="Tranquil1"><abbr title="安らぎのかけら">Tranquil Shard</abbr></label>
+            <input id="Tranquil1" value="0" />
+            <button id="down" onclick="modify_qty(-1, 'Tranquil1')">-1</button>
+            <button id="up" onclick="modify_qty(1, 'Tranquil1')">+1</button>
+          </div>
+        </td>
+        <td>
+          <div class="box">
+            <label for="Tranquil2"><abbr title="安らぎのしずく">Tranquil Stone</abbr></label>
+            <input id="Tranquil2" value="0" />
+            <button id="down" onclick="modify_qty(-1, 'Tranquil2')">-1</button>
+            <button id="up" onclick="modify_qty(1, 'Tranquil2')">+1</button>
+          </div>
+        </td>
+        <td>
+          <div class="box">
+            <label for="Tranquil3"><abbr title="安らぎの魔石">Tranquil Gem</abbr></label>
+            <input id="Tranquil3" value="0" />
+            <button id="down" onclick="modify_qty(-1, 'Tranquil3')">-1</button>
+            <button id="up" onclick="modify_qty(1, 'Tranquil3')">+1</button>
+          </div>
+        </td>
+        <td>
+          <div class="box">
+            <label for="Tranquil4"><abbr title="安らぎの結晶">Tranquil Crystal</abbr></label>
+            <input id="Tranquil4" value="0" />
+            <button id="down" onclick="modify_qty(-1, 'Tranquil4')">-1</button>
+            <button id="up" onclick="modify_qty(1, 'Tranquil4')">+1</button>
+          </div>
+        </td>
+      </tr>
+    </table>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <button class="accordion">Tranquil Shard / 安らぎのかけら </button>
+    <div class="panel">
+      <p>XIII Mushrooms</p>
+    </div>
+
+    <button class="accordion">Tranquil Stone / 安らぎのしずく </button>
+    <div class="panel">
+      <p>XIII Mushrooms</p>
+    </div>
+
+    <button class="accordion">Tranquil Gem / 安らぎの魔石 </button>
+    <div class="panel">
+      <p>XIII Mushrooms</p>
+    </div>
+
+    <button class="accordion">Tranquil Crystal / 安らぎの結晶 </button>
+    <div class="panel">
+      <p>XIII Mushrooms</p>
+    </div>
+
+    <script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].onclick = function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight){
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+      }
+    }
+    </script>
+  </div>
+
+  <div id = "BrightII" class = "tabcontent">
+    <table width = "500" border="0" cellspacing = "0" cellpadding = "5" align = "center">
+      <tr>
+        <td>
+          <div class="box">
+            <label for="BrightII1"><abbr title="うるおいのかけら">Bright Shard</abbr></label>
+            <input id="BrightII1" value="0" />
+            <button id="down" onclick="modify_qty(-1, 'BrightII1')">-1</button>
+            <button id="up" onclick="modify_qty(1, 'BrightII1')">+1</button>
+          </div>
+        </td>
+        <td>
+          <div class="box">
+            <label for="BrightII2"><abbr title="うるおいのしずく">Bright Stone</abbr></label>
+            <input id="BrightII2" value="0" />
+            <button id="down" onclick="modify_qty(-1, 'BrightII2')">-1</button>
+            <button id="up" onclick="modify_qty(1, 'BrightII2')">+1</button>
+          </div>
+        </td>
+        <td>
+          <div class="box">
+            <label for="BrightII3"><abbr title="うるおいの魔石">Bright Gem</abbr></label>
+            <input id="BrightII3" value="0" />
+            <button id="down" onclick="modify_qty(-1, 'BrightII3')">-1</button>
+            <button id="up" onclick="modify_qty(1, 'BrightII3')">+1</button>
+          </div>
+        </td>
+        <td>
+          <div class="box">
+            <label for="BrightII4"><abbr title="うるおいの結晶">Bright Crystal</abbr></label>
+            <input id="BrightII4" value="0" />
+            <button id="down" onclick="modify_qty(-1, 'BrightII4')">-1</button>
+            <button id="up" onclick="modify_qty(1, 'BrightII4')">+1</button>
+          </div>
+        </td>
+      </tr>
+    </table>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <button class="accordion">Bright Shard / うるおいのかけら </button>
+    <div class="panel">
+      <p>Creeper Plant, Hook Bat, Minute Bomb, Rabid Dog, Soldier (Land of Dragons)</p>
+    </div>
+
+    <button class="accordion">Bright Stone / うるおいのしずく </button>
+    <div class="panel">
+      <p> Aeroplane, Cannon Gun, Driller Mole, Luna Bandit, Silver Rock, Tornado Step, Wight Knight (Timeless River)</p>
+    </div>
+
+    <button class="accordion">Bright Gem / うるおいの魔石 </button>
+    <div class="panel">
+      <p>Aerial Knocker, Magnum Loader, Surveillance Robot (Pride Lands)</p>
+    </div>
+
+    <button class="accordion">Bright Crystal / うるおいの結晶 </button>
+    <div class="panel">
+      <p>Air Pirate, Crescendo, NeoShadow, Strafer (Space Paranoids)</p>
+    </div>
+
+    <script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].onclick = function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight){
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+      }
+    }
+    </script>
+  </div>
+
+  <div id = "Energy" class = "tabcontent">
+    <table width = "500" border="0" cellspacing = "0" cellpadding = "5" align = "center">
+      <tr>
+        <td>
+          <div class="box">
+            <label for="Energy1"><abbr title="みなぎるかけら">Energy Shard</abbr></label>
+            <input id="Energy1" value="0" />
+            <button id="down" onclick="modify_qty(-1, 'Energy1')">-1</button>
+            <button id="up" onclick="modify_qty(1, 'Energy1')">+1</button>
+          </div>
+        </td>
+        <td>
+          <div class="box">
+            <label for="Energy2"><abbr title="みなぎるしずく">Energy Stone</abbr></label>
+            <input id="Energy2" value="0" />
+            <button id="down" onclick="modify_qty(-1, 'Energy2')">-1</button>
+            <button id="up" onclick="modify_qty(1, 'Energy2')">+1</button>
+          </div>
+        </td>
+        <td>
+          <div class="box">
+            <label for="Energy3"><abbr title="みなぎる魔石">Energy Gem</abbr></label>
+            <input id="Energy3" value="0" />
+            <button id="down" onclick="modify_qty(-1, 'Energy3')">-1</button>
+            <button id="up" onclick="modify_qty(1, 'Energy3')">+1</button>
+          </div>
+        </td>
+        <td>
+          <div class="box">
+            <label for="Energy4"><abbr title="みなぎる結晶">Energy Crystal</abbr></label>
+            <input id="Energy4" value="0" />
+            <button id="down" onclick="modify_qty(-1, 'Energy4')">-1</button>
+            <button id="up" onclick="modify_qty(1, 'Energy4')">+1</button>
+          </div>
+        </td>
+      </tr>
+    </table>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <button class="accordion">Energy Shard / みなぎるかけら </button>
+    <div class="panel">
+      <p>Bolt Tower, Gargoyle Knight, Gargoyle Warrior, Nightwalker (Beast's Castle)</p>
+    </div>
+
+    <button class="accordion">Energy Stone / みなぎるしずく </button>
+    <div class="panel">
+      <p>Hammer Frame, Lance Soldier, Trick Ghost (Halloween Town)</p>
+    </div>
+
+    <button class="accordion">Energy Gem / みなぎる魔石 </button>
+    <div class="panel">
+      <p>Emerald Blues, Fortuneteller (Agrabah)</p>
+    </div>
+
+    <button class="accordion">Energy Crystal / みなぎる結晶 </button>
+    <div class="panel">
+      <p>Bookmaster, Shaman (Hollow Bastion)</p>
+    </div>
+
+    <script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].onclick = function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight){
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+      }
+    }
+    </script>
+  </div>
+
+  <div id = "Serenity" class = "tabcontent">
+    <table width = "500" border="0" cellspacing = "0" cellpadding = "5" align = "center">
+      <tr>
+        <td>
+          <div class="box">
+            <label for="Serenity1"><abbr title="満たされるかけら">Serenity Shard</abbr></label>
+            <input id="Serenity1" value="0" />
+            <button id="down" onclick="modify_qty(-1, 'Serenity1')">-1</button>
+            <button id="up" onclick="modify_qty(1, 'Serenity1')">+1</button>
+          </div>
+        </td>
+        <td>
+          <div class="box">
+            <label for="Serenity2"><abbr title="満たされるしずく">Serenity Stone</abbr></label>
+            <input id="Serenity2" value="0" />
+            <button id="down" onclick="modify_qty(-1, 'Serenity2')">-1</button>
+            <button id="up" onclick="modify_qty(1, 'Serenity2')">+1</button>
+          </div>
+        </td>
+        <td>
+          <div class="box">
+            <label for="Serenity3"><abbr title="満たされる魔石">Serenity Gem</abbr></label>
+            <input id="Serenity3" value="0" />
+            <button id="down" onclick="modify_qty(-1, 'Serenity3')">-1</button>
+            <button id="up" onclick="modify_qty(1, 'Serenity3')">+1</button>
+          </div>
+        </td>
+        <td>
+          <div class="box">
+            <label for="Serenity4"><abbr title="満たされる結晶">Serenity Crystal</abbr></label>
+            <input id="Serenity4" value="0" />
+            <button id="down" onclick="modify_qty(-1, 'Serenity4')">-1</button>
+            <button id="up" onclick="modify_qty(1, 'Serenity4')">+1</button>
+          </div>
+        </td>
+      </tr>
+    </table>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <button class="accordion">Serenity Shard / 満たされるかけら </button>
+    <div class="panel">
+      <p>Bulky Vendor, Assault Rider, Creeper, Fat Bandit, Graveyard, Hot Rod, Large Body, Toy Soldier (Land of Dragons)</p>
+    </div>
+
+    <button class="accordion">Serenity Stone / 満たされるしずく </button>
+    <div class="panel">
+      <p>Bulky Vendor, Crimson Jazz, Devastator, Dusk, Living Bone, Morning Star(Hollow Bastion)</p>
+    </div>
+
+    <button class="accordion">Serenity Gem / 満たされる魔石 </button>
+    <div class="panel">
+      <p>Bulky Vendor, Dancer, Dragoon, Gambler, Sniper, Mad Bumper, Runemaster,  Reckless (The World that Never Was)</p>
+    </div>
+
+    <button class="accordion">Serenity Crystal / 満たされる結晶 </button>
+    <div class="panel">
+      <p>Bulky Vendor, Synthesis</p>
+    </div>
+
+    <script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].onclick = function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight){
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+      }
+    }
+    </script>
+  </div>
+
+  <div id = "OtherII" class = "tabcontent">
+    <table width = "500" border="0" cellspacing = "0" cellpadding = "5" align = "center">
+      <tr>
+        <td>
+          <div class="box">
+            <label for="OtherII1"><abbr title="現れを幻影">Found Illusion (FM Only)</abbr></label>
+            <input id="OtherII1" value="0" />
+            <button id="down" onclick="modify_qty(-1, 'OtherII1')">-1</button>
+            <button id="up" onclick="modify_qty(1, 'OtherII1')">+1</button>
+          </div>
+        </td>
+        <td>
+          <div class="box">
+            <label for="OtherII2"><abbr title="失われた幻影">Lost Illusion (FM Only)</abbr></label>
+            <input id="OtherII2" value="0" />
+            <button id="down" onclick="modify_qty(-1, 'OtherII2')">-1</button>
+            <button id="up" onclick="modify_qty(1, 'OtherII2')">+1</button>
+          </div>
+        </td>
+        <td>
+          <div class="box">
+            <label for="OtherII3"><abbr title="オリハル">Orichalcum</abbr></label>
+            <input id="OtherII3" value="0" />
+            <button id="down" onclick="modify_qty(-1, 'OtherII3')">-1</button>
+            <button id="up" onclick="modify_qty(1, 'OtherII3')">+1</button>
+          </div>
+        </td>
+        <td>
+          <div class="box">
+            <label for="OtherII4"><abbr title="オリハルコン">Orichalcum+</abbr></label>
+            <input id="OtherII4" value="0" />
+            <button id="down" onclick="modify_qty(-1, 'OtherII4')">-1</button>
+            <button id="up" onclick="modify_qty(1, 'OtherII4')">+1</button>
+          </div>
+        </td>
+      </tr>
+    </table>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <p> </p>
+    <button class="accordion">Foudn Illusion / 現れを幻影 </button>
+    <div class="panel">
+      <p>Terra, Synthesis</p>
+    </div>
+
+    <button class="accordion">Lost Illusion / 失われた幻影 </button>
+    <div class="panel">
+      <p>Vexen Data, Lexaeus Data, Zexion Data, Marluxia Data, Larxene Data (Hollow Bastion)</p>
+    </div>
+
+    <button class="accordion">Orichalcum / オリハル </button>
+    <div class="panel">
+      <p>Bulky Vendor</p>
+    </div>
+
+    <button class="accordion">Orichalcum+ / オリハルコン </button>
+    <div class="panel">
+      <p>Space Paranoids - Central Computer Mesa (In A Treasure Chest)</p>
+      <p>Twilight Town - Sunset Terrace (Playing As Sora) (In A Treasure Chest)</p>
+      <p>The World That Never Was - The Brink of Despair (In a Treasure Chest hugging the wall to the left as you enter)</p>
+      <p>100 Acre Wood - Finish Starry Hill</p>
+      <p>Atlantica - Finish "A New Day is Dawning"</p>
+      <p>Olympus Coliseum - Beat Goddess of Fate Cup</p>
+      <p>Moogle Shop - Obtained after getting at least one of every other material in the game. You must leave the shop after obtaining this Orichalcum+ then re-enter to have it added to your materials</p>
+    </div>
+
+    <script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].onclick = function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight){
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        }
+      }
+    }
+    </script>
+  </div>
+
+</body>
+</html>
